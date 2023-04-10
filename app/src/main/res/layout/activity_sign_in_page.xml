@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SignInPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:foregroundGravity="center"
+            android:src="@drawable/loginmale" />
+
+        <TextView
+            android:id="@+id/welcomeTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview"
+            android:text="@string/welcome_txt"
+            android:textAlignment="center"
+            android:textColor="#E91E63"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeTXT"
+            android:layout_marginTop="16dp"
+            android:hint="نام خود را وارد نمایید"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/input_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_name"
+            android:hint="نام خانوادگی خود را وارد نمایید"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_lastName"
+            android:hint="ایمیل خود را وارد نمایید"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_email"
+            android:gravity="right"
+            android:hint="رمز مورد نظر  خود را وارد نمایید"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/inputTelNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_password"
+            android:gravity="right"
+            android:hint="شماره تلفن همراه خود را وارد نمایید"
+            android:inputType="phone" />
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@id/inputTelNumber"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="آقا" />
+
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checked="true"
+                android:text="خانم" />
+
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/newsSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="دریافت آخرین اخبار"
+             />
+
+        <RelativeLayout
+            android:id="@+id/termsCheckBoxGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsSwitch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/termsOfAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="با قوانین اپ موافقم"
+                android:textAlignment="center" />
+
+            <CheckBox
+                android:id="@+id/readTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/termsOfAgreement"
+                android:text="قوانین اپ را خوانده ام"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/registerBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/termsCheckBoxGroup"
+            android:background="#8BC34A"
+            android:layout_marginTop="16dp"
+            android:text="ثبت نام" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
